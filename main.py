@@ -22,12 +22,20 @@ language_code = [23,24,25,26,27,28,29,30,31,32,33,35,36,37,38,39,40,41,43,44,45,
 language_dict = {}
 for i in range(0,len(language_name)):
     language_dict[language_name[i]]=language_code[i]
-region_dict = {"Africa":3,
-    "Asia":5,
-    "Europe":6,
-    "Latin America and the Caribbean":4,
-    "Northern America":9,
-    "Oceania":7}
+
+country_name = ['Algeria','Angola','Benin','Botswana','Burkina Faso','Burundi','Cameroon', 'Cape Verde','Central African Republic','Chad','Comoros','Congo','Cote d\'Ivoire', 'Dem. Rep. Congo','Djibouti','Egypt','Equatorial Guinea','Eritrea','Eswatini (Swaziland)' ,'Ethiopia','French Southern Territory','Gabon','Gambia','Ghana','Guinea','Guinea-Bissau','Kenya', 'Lesotho','Liberia','Libya','Madagascar','Malawi','Mali','Mauritania','Mauritius','Mayotte', 'Morocco','Mozambique','Namibia','Niger','Nigeria','Reunion','Rwanda','Saint Helena', 'Sao Tome and Principe','Senegal','Seychelles','Sierra Leone','Somalia','Somaliland','South Africa', 'South Sudan','Sudan','Tanzania','Togo','Tunisia','Uganda','Western Sahara','Zambia','Zimbabwe', 'Afghanistan','Armenia','Azerbaijan','Bahrain','Bangladesh', 'Bhutan','Brunei','Cambodia','China','Georgia','Hong Kong','India','Indonesia','Iran','Iraq', 'Israel','Japan','Jordan','Kazakhstan','Kuwait','Kyrgyzstan','Laos','Lebanon','Macao','Malaysia', 'Maldives','Mongolia','Myanmar','Nepal','North Korea','Oman','Pakistan', 'Palestine / West Bank & Gaza','Qatar','Saudi Arabia','Singapore','South Korea','Sri Lanka', 'Syria','Taiwan','Tajikistan','Thailand','Timor-Leste','Turkmenistan','UAE','Uzbekistan', 'Vietnam','Yemen','Philippines','Austria', 'Azores','Belgium','Bulgaria','Canary Islands','Croatia','Cyprus','Czech Republic','Denmark', 'Estonia','Faroe Islands','Finland','France','Germany','Greece','Hungary','Ireland','Italy', 'Latvia','Lithuania','Luxembourg','Malta','Netherlands','Poland','Portugal','Romania','Slovakia', 'Slovenia','Spain','Sweden','Madeira','Aland Islands','Albania','Andorra', 'Belarus','Bosnia and Herzegovina','Channel Islands','Gibraltar','Iceland','Isle of Man','Kosovo', 'Liechtenstein','Moldova','Monaco','Montenegro','North Macedonia','Norway','Russia','Serbia', 'Svalbard','Switzerland','Turkey','UK','Ukraine','Vatican City','San Marino','Anguilla', 'Antigua and Barbuda','Argentina','Aruba','Bahamas','Barbados','Belize','Bolivia','Brazil', 'British Virgin Islands','Caribbean Netherlands','Cayman Islands','Chile','Colombia','Costa Rica', 'Cuba','Curaçao','Dominica','Dominican Republic','Ecuador','El Salvador', 'Falkland Islands','French Guiana','Galapagos','Grenada','Guadeloupe','Guatemala','Guyana','Haiti', 'Honduras','Jamaica','Martinique','Mexico','Nicaragua','Panama','Paraguay','Peru','Puerto Rico', 'Saint Kitts and Nevis','Saint Lucia','Saint Martin','Saint Vincent and the Grenadines', 'Sint Maarten','Suriname','Trinidad and Tobago','Turks and Caicos','Uruguay','US Virgin Islands', 'Venezuela','Montserrat','Bermuda','Canada','Greenland','USA','St. Pierre and Miquelon', 'American Samoa','Australia','Christmas Island','Cocos (Keeling) Islands','Cook Islands', 'Easter Island','Fiji','French Polynesia','Guam','Heard and McDonald Islands','Kiribati', 'Marshall Islands','Micronesia','Nauru','New Caledonia','New Zealand','Niue','Norfolk Island', 'Northern Mariana Islands','Papua New Guinea','Pitcairn','Samoa','Solomon Islands','Tokelau', 'Tonga','Tuvalu','Vanuatu','Wallis and Futuna','Palau']
+country_code = [10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,61,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,300,58,59,60,62,63,64,65,66,67,68,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,169,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,273,261,262,263,264,265,266,267,268,269,270,271,274,275,276,272,277,278,280,281,282,283,229,284,285,279,73,74,75,76,77,78,79,80,81,82,297,83,84,85,86,87,298,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,106,107,108,109,110,111,112,113,114,299,115,116,117,118,119,120,104,292,294,296,293,295,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,250,251,252,253,254,255,256,257,258,249]
+country_dict={}
+for i in range(len(country_name)):
+    country_dict[country_name[i]]=country_code[i]
+
+region_dict = {"Africa":3,"Asia":5,"Europe":6,"Latin America and the Caribbean":4,"Northern America":9,"Oceania":7}
+
+sector_name = ['Administration','Advocacy','Agriculture','Air & Aviation','Anti-Corruption','Architecture','Audit','Banking','Border Management','Civil Engineering','Civil Society & NGOs','Conflict','Corporate Social Responsibility','Culture','Decentralization & Local Development','Democratization','Design','Disaster Reduction','Education','Electrical Engineering','Energy','Environment & NRM','Finance & Accounting','Fisheries & Aquaculture','Food Processing & Safety','Food Security','Fundraising','Furniture & Office Supplies','Gender','Grants & Grant Schemes','Health','Heating','Human Resources','Human Rights','Humanitarian Aid & Emergency','Industry',' Commerce & Services','Information & Communication Technology','Inst. Devt. & Cap. building','Justice Reform','Laboratory & Measurement','Labour Market & Employment','Land & Erosion & Soil','Law','Livestock (incl. animal/bird production & health)','Logistics','Macro-Econ. & Public Finance','Mapping & Cadastre','Marketing','Mechanical Engineering','Media and Communications','Micro-finance','Migration','Mining','Monitoring & Evaluation','Nuclear','Other','Pollution & Waste Management (incl. treatment)','Poverty Reduction','Printing','Procurement','Programme & Resource Management','Public Administration','Refrigeration','Regional Integration','Research','Risk Management (incl. insurance)','Roads & Bridges','Rural Development','Science & Innovation','Security','SME & Private Sector','Social Development','Standards & Consumer Protection','Statistics','Telecommunications','Tourism','Trade','Training','Translation','Transport','Urban Development','Vehicles','Water & Sanitation','Water Navigation & Ports & Shipping','Youth']
+sector_code = [98,28,107,100,45,77,99,55,42,46,3,47,94,4,101,50,102,95,5,51,6,7,92,78,52,8,29,67,9,79,11,80,81,33,12,13,70,73,57,71,14,56,58,103,15,16,54,106,83,62,17,31,104,30,59,75,44,19,96,20,85,60,86,65,87,105,26,1,74,38,76,22,23,43,72,40,25,41,88,93,34,66,48,89,27]
+sector_dict = {}
+for i in range(0,len(sector_name)):
+    sector_dict[sector_name[i]]=sector_code[i]
 
 def get_info(description):
     outputs = []
@@ -41,7 +49,7 @@ def get_info(description):
     return outputs
 
 
-def cast_net(name="",job_types="",languages="",region="",minimum_experience="",maximum_experience="",recency="",sectors="",types=""):
+def cast_net(name="",job_types="",languages="",countries="",minimum_experience="",maximum_experience="",recency="",sectors="",types=""):
     url = "https://www.developmentaid.org/jobs/search?sort=highlighted.desc,postedDate.desc"
     if name != '':
         name = name.replace(' ','%20')
@@ -64,13 +72,21 @@ def cast_net(name="",job_types="",languages="",region="",minimum_experience="",m
             for code in language_codes:
                 addition = addition + code + ','
             languages = "&languages="+addition[0:-1]
-    if region != '':
-        if region in region_dict.keys():
-            region = str(region_dict[region])
-            region=region.replace(' ','%20')
-            region = "&locations="+region
-        else:
-            region = ""
+    if countries != '':
+        country_list = country.split(",")
+        country_codes = []
+        for country in country_list:
+            if country in country_dict.keys():
+                country = str(country_dict[lang])
+                country_codes.append(country)
+            else:
+                next
+        addition = ""
+        countries = ''
+        if country_codes != []:
+            for code in country_codes:
+                addition = addition + code + ','
+            countries = "&languages="+addition[0:-1]
     if minimum_experience != '':
         minimum_experience=minimum_experience.replace(' ','%20')
         minimum_experience = "&minimumExperience="+minimum_experience
@@ -81,12 +97,24 @@ def cast_net(name="",job_types="",languages="",region="",minimum_experience="",m
         recency=recency.replace(' ','%20')
         recency = "&postedDateLessThanDaysAgo="+recency
     if sectors != '':
-        sectors=sectors.replace(' ','%20')
-        sectors = "&sectors="+sectors
+        sector_list = sectors.split(",")
+        sector_codes = []
+        for sector in sector_list:
+            if sector in sector_dict.keys():
+                sect = str(sector_dict[sect])
+                sector_codes.append(sect)
+            else:
+                next
+        addition = ""
+        sectors = ''
+        if sector_codes != []:
+            for code in sector_codes:
+                addition = addition + code + ','
+            sectors = "&sectors"+addition[0:-1]
     if types != '':
         types=types.replace(' ','%20')
         types = "&types="+types
-    home_page = url+name+job_types+languages+region+minimum_experience+maximum_experience+recency+sectors+types
+    home_page = url+name+job_types+languages+countries+minimum_experience+maximum_experience+recency+sectors+types
     browser = webdriver.Chrome()
     browser.get(home_page)
     time.sleep(10)
