@@ -1,4 +1,4 @@
-# AidJobsAssets
+# AidJobs
 ## About
 AidJobs is a AI-powered tool for summarising relevant job opportunities in the humanitarian and development sector. Users receive an Excel file with an AI summary of the key details of relevant project opportunities from sources where information is not uniformly presented.
 
