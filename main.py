@@ -153,7 +153,7 @@ def cast_net(name="",job_types="",languages="",countries="",minimum_experience="
         op['Location'] = info[3]
         op['Duties'] = info[4]
         op['Experience'] = info[5]
-        op['Link to Tender'] = [d for d in opportunity_dict][i]
+        op['Link to Tender'] = opportunity
         i+=1
     df = pd.DataFrame.from_dict(opportunity_dict, orient='index')
     excel_filename = 'Opportunities Summary'
