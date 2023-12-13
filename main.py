@@ -37,6 +37,18 @@ sector_dict = {}
 for i in range(0,len(sector_name)):
     sector_dict[sector_name[i]]=sector_code[i]
 
+job_type_name = ["Contract, 12 months +", "Contract, 4 to 12 months","Contract, up to 4 months","Internship / Volunteer","Other","Permanent position"]
+job_type_code = [3,2,1,5,6,4]
+job_type_dict={}
+for i in range(len(job_type_name)):
+    job_type_dict[job_type_name[i]]=job_type_code[i]
+
+organisation_type_name = ['Academic Institution','Consulting Organization','Engineering Firm','Financial Institution','Funding Agency','Government Agency','NGO','Other','Supplier']
+organisation_type_code = [7,3,6,8,4,2,5,20,19,9]
+organisation_type_dict = {}
+for i in range(0,len(organisation_type_name)):
+    organisation_type_dict[organisation_type_name[i]]=organisation_type_code[i]
+
 def get_info(description):
     outputs = []
     questions = ['What languages are required?','What education is required?',
@@ -55,8 +67,20 @@ def cast_net(name="",job_types="",languages="",countries="",minimum_experience="
         name = name.replace(' ','%20')
         name = "&organizationName="+name
     if job_types != '':
-        job_types=job_types.replace(' ','%20')
-        job_types = "&jobTypes="+job_types
+        job_types_list = job_types.split(",")
+        job_types_codes = []
+        for job_type in job_types_list:
+            if job_type in job_type_dict.keys():
+                job_type = str(job_type_dict[job_type])
+                job_types_codes.append(job_type)
+            else:
+                next
+        addition = ""
+        job_types = ''
+        if job_types_codes != []:
+            for code in job_types_codes:
+                addition = addition + code + ','
+            job_types = "&jobTypes="+addition[0:-1]
     if languages != '':
         language_list = languages.split(",")
         language_codes = []
@@ -112,8 +136,20 @@ def cast_net(name="",job_types="",languages="",countries="",minimum_experience="
                 addition = addition + code + ','
             sectors = "&sectors"+addition[0:-1]
     if types != '':
-        types=types.replace(' ','%20')
-        types = "&types="+types
+        organisation_type_list = types.split(",")
+        organisation_type_codes = []
+        for type in organisation_type_list:
+            if organisation_type in organisation_type.keys():
+                organisation_type = str(organisation_type_dict[organisation_type])
+                organisation_type_codes.append(sect)
+            else:
+                next
+        addition = ""
+        organisation_types = ''
+        if organisation_type_codes != []:
+            for code in organisation_type_codes:
+                addition = addition + code + ','
+            organisation_types = "&types="+addition[0:-1]        
     home_page = url+name+job_types+languages+countries+minimum_experience+maximum_experience+recency+sectors+types
     browser = webdriver.Chrome()
     browser.get(home_page)
