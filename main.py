@@ -198,3 +198,29 @@ def cast_net(name="",job_types="",languages="",countries="",minimum_experience="
     new_string = excel_filename + " " + formatted_timestamp+'.xlsx'
     df.to_excel(new_string, index=False)
     print('Your potential jobs are now available at {}'.format(new_string))
+def get_options(argument):
+    options = ['name','job_types','languages','countries','minimum_experience','recency','sectors','types']
+    if argument not in options: 
+        return "Please select one of the cast_net criteria: names, job_types, languages, countries, minimum_experience, recency, sectors, or types"
+    else:
+        if argument == 'name':
+            return "Please enter the name of the organisation whose job postings you are interested in seeing"
+        elif argument == 'job_types':
+            option_list = job_type_dict.keys()
+            return "Types of jobs are: " + option_list
+        elif argument == 'languages':
+            option_list = language_dict.keys()
+            return "Enter each language seperated only by a comma (no spaces). Language options are: "+option_list
+        elif argument == 'countries':
+            option_list = country_dict.keys()
+            return "Valid country options are: " + option_list
+        elif argument == 'minimum_experience':
+            return "Please enter an integer (years) between 0 and 20"
+        elif argument == 'recency':
+            return "Please provide the maximum numbers of days since posting. Options are: 1,2,7,14,31"
+        elif argument == 'sectors':
+            option_list = region_dict.keys()
+            return "Sector options are: " + option_list
+        elif argument == 'types':
+            option_list = organisation_type_dict.keys()
+            return "Options for types of organisations are: " + option_list
