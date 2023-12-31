@@ -12,7 +12,7 @@ After downloading the relevant packages as specified in 'requirements.txt', the 
 #### job_types – The type of the opportunity sought. Any combination of the following: Contract, 12 months +; Contract, 4 to 12 months; Contract, up to 4 months; Internship / Volunteer; Permanent position; or Other
 #### languages - Any language requirements for which you wish to see open positions (e.g. 'Spanish')
 #### countries - Any countries of interest for which you wish to see open positions (e.g. 'Cameroon')
-#### minimum experience - Minimum experience required for open positions
+#### minimum_experience - Minimum experience required for open positions
 #### sectors - Sectors in which you wish to see open positions (e.g., 'Education')
 #### types - The type of agency listing open positions (e.g., 'Funding Agency')
 For a full list of options available for each argument, please run 'get_options()' with the argument name as the argument. 
